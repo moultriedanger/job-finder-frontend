@@ -1,0 +1,57 @@
+[
+  {
+    "id": 1,
+    "title": "Frontend Developer",
+    "company": "TechNova",
+    "location": "New York, NY",
+    "remote": true,
+    "postedDate": "2025-05-20",
+    "description": "Build and maintain modern UI components using React and TailwindCSS. Collaborate with UX designers and backend engineers.",
+    "salaryRange": "$90,000 - $110,000",
+    "skills": ["React", "JavaScript", "CSS", "REST APIs"]
+  },
+  {
+    "id": 2,
+    "title": "Backend Developer",
+    "company": "DataBridge",
+    "location": "Austin, TX",
+    "remote": false,
+    "postedDate": "2025-05-18",
+    "description": "Design and optimize scalable APIs and services. Work with databases and cloud infrastructure.",
+    "salaryRange": "$100,000 - $130,000",
+    "skills": ["Node.js", "Express", "PostgreSQL", "AWS"]
+  },
+  {
+    "id": 3,
+    "title": "Full Stack Developer",
+    "company": "CodeCraft",
+    "location": "Remote",
+    "remote": true,
+    "postedDate": "2025-05-22",
+    "description": "Build full-stack features from scratch. Maintain code quality with tests and reviews.",
+    "salaryRange": "$105,000 - $125,000",
+    "skills": ["React", "Node.js", "MongoDB", "Docker"]
+  },
+  {
+    "id": 4,
+    "title": "Mobile App Developer",
+    "company": "FitApps Inc.",
+    "location": "San Francisco, CA",
+    "remote": false,
+    "postedDate": "2025-05-21",
+    "description": "Develop and maintain mobile fitness applications using React Native. Collaborate with designers and product managers.",
+    "salaryRange": "$95,000 - $115,000",
+    "skills": ["React Native", "TypeScript", "Redux", "Firebase"]
+  },
+  {
+    "id": 5,
+    "title": "Software Engineer Intern",
+    "company": "InnovateX",
+    "location": "Boston, MA",
+    "remote": false,
+    "postedDate": "2025-05-15",
+    "description": "Assist with software development projects, write documentation, and participate in code reviews.",
+    "salaryRange": "$25/hr",
+    "skills": ["Python", "Git", "SQL", "Communication"]
+  }
+]
