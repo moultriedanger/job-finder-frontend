@@ -1,4 +1,4 @@
-function JobCard(job){
+function JobCard({job}){
     return (
     <div className="job-card">
       <h2>{job.title}: {job.company}</h2>

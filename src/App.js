@@ -1,6 +1,6 @@
 import Navbar from "./Navbar";
 import Search from "./Search";
-import JobCard from "./JobCard";
+import JobList from "./JobList";
 import jobs from "./data/jobs.json"
 
 
@@ -9,7 +9,7 @@ function App() {
     <div className="App">
       <Navbar/>
       <Search/>
-      {jobs.map((job) => JobCard(job))}
+      <JobList jobs = {jobs}/>
       
     </div>
   );

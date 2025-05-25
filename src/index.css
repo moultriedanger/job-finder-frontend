@@ -78,9 +78,8 @@ code {
 .searchWrapper {
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: calc(100vh - 100px);
-  background-color: #f9fafc;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .searchContainer {
