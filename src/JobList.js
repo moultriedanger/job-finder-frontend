@@ -4,8 +4,8 @@ function JobList({jobs}){
     return(
         <div className="job-list-container">
         {
-        jobs.map((job) => (
-            <JobCard job = {job} key = {job.id}/>
+        jobs.slice(0,15).map((job) => (
+            <JobCard job = {job} key = {job.jobId}/>
         ))
         }
     </div>
