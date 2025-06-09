@@ -3,9 +3,9 @@ import Navbar from "./Navbar";
 import { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
-import Nav from "./Navbar";
 import Home from "./Home"
 import Jobs from "./Jobs";
+import Companies from "./Companies";
 
 
 function App() {
@@ -18,10 +18,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/jobs" element={<Jobs />} />
+        <Route path="/companies" element={<Companies />} />
       </Routes>
-
-      {/* <Search/>
-      <JobList jobs = {jobs}/> */}
       
       </div>
     </Router>

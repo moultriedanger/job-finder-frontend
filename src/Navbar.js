@@ -5,7 +5,7 @@ function Nav(){
             <div className="links">
                 <a href="/">Home</a>
                 <a href="/jobs">Jobs</a> 
-                <a href="/">Companies</a>
+                <a href="/companies">Companies</a>
                 <a href="/">Sign in</a>
             </div>
         </nav>
