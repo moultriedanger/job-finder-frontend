@@ -1,8 +1,9 @@
+import CompanyList from "./CompanyList";
+
 const Companies = () => {
     return (
         <>
-            <h1>Hello world</h1>
-        
+            <CompanyList/>
         </>
       );
 }
