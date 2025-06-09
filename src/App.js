@@ -1,4 +1,5 @@
 import Nav from './shared/Nav';
+import CompanyJobs from './companies/CompanyJobs';
 
 import { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
@@ -19,6 +20,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/jobs" element={<Jobs />} />
         <Route path="/companies" element={<Companies />} />
+        <Route path="/companies/:id/jobs" element={<CompanyJobs />}></Route>
       </Routes>
       
       </div>
