@@ -1,8 +1,12 @@
 import JobList from "./JobList";
+import Search from "../Search"
 
 const Jobs = () => {
     return (
-        <JobList/>
+        <>
+            <Search/>
+            <JobList/>
+        </>
     );
 }
  

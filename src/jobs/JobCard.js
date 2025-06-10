@@ -5,10 +5,17 @@ function JobCard({job}){
       <p className="location">{job.jobLocation}</p>
       <p>{job.jobDescription}</p>
       <p className="salary">{job.maxSalary}</p>
+      <button
+                    onClick={(e) => {
+                        e.stopPropagation();
+                        window.open(job.postingUrl, '_blank');
+                    }}
+                >
+                    Apply on LinkedIn
+                </button>
     </div>
   );
 }
 
 export default JobCard
-
 
