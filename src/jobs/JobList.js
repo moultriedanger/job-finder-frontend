@@ -17,7 +17,7 @@ function JobList(){
 
             const data = await response.json();
             setJobs(data);
-            console.log(data);
+            // console.log(data);
         } catch (error) {
             console.error("Error fetching jobs:", error.message);
         }
