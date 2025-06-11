@@ -1,3 +1,6 @@
+import { Link } from "react-router-dom";
+
+
 function JobCard({job}){
 
     function isHourly(salary){
@@ -30,22 +33,24 @@ function JobCard({job}){
     }
 
     return (
-    <div className="job-card">
-      <h2>{job.jobTitle}</h2>
-      <p>{job.companyName}</p>
-      <p className="location">{job.location}</p>
-      <div>
-        {isHourly(job.maxSalary) ? <p>${removeDecimal(job.maxSalary)} per hour</p> : <p>${formatYearly(job.maxSalary)} per year</p> }
-      </div>
-      <button
-            onClick={(e) => {
-                e.stopPropagation();
-                window.open(job.postingUrl, '_blank');
-            }}
-        >
-            Apply on LinkedIn
-        </button>
-    </div>
+      <Link to = {`/jobs/${job.jobId}`}>
+        <div className="job-card">
+        <h2>{job.jobTitle}</h2>
+        <p>{job.companyName}</p>
+        <p className="location">{job.location}</p>
+        <div>
+          {isHourly(job.maxSalary) ? <p>${removeDecimal(job.maxSalary)} per hour</p> : <p>${formatYearly(job.maxSalary)} per year</p> }
+        </div>
+        <button
+              onClick={(e) => {
+                  e.stopPropagation();
+                  window.open(job.postingUrl, '_blank');
+              }}
+          >
+              Apply on LinkedIn
+          </button>
+        </div>
+      </Link>
   );
 }
 
