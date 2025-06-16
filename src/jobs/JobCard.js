@@ -33,7 +33,7 @@ function JobCard({job}){
     }
 
     return (
-      <Link to = {`/jobs/${job.jobId}`}>
+      <Link to = {`/jobs/${job.jobId}`} className="job-link">
         <div className="job-card">
         <h2>{job.jobTitle}</h2>
         <p>{job.companyName}</p>

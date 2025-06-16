@@ -119,6 +119,11 @@ code {
   }
 }
 
+.job-link {
+  text-decoration: none;
+  color: inherit; /* Ensures no color shift on hover */
+}
+
 .job-card {
   background-color: white;
   border: 1px solid #dee2e6;
@@ -127,10 +132,16 @@ code {
   margin: 1rem 0;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
   transition: box-shadow 0.3s;
+  color: inherit;
 }
 
 .job-card:hover {
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* Only underline h2 (title) when card is hovered */
+.job-link:hover .job-card h2 {
+  text-decoration: underline;
 }
 
 .job-card h2 {
@@ -147,6 +158,11 @@ code {
 .job-card .salary {
   font-weight: bold;
   color: #2b2d42;
+}
+
+.job-card p,
+.job-card button {
+  transition: none; /* Prevent hover styles from being inherited */
 }
 
 
