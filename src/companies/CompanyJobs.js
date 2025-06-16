@@ -28,6 +28,8 @@ const CompanyJobs = () => {
         fetchCompanyJobs();
     }, []);
 
+    console.log(companyJobs)
+
     return (
 
         <div className="jobs-container">

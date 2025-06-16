@@ -7,14 +7,15 @@ const Job = () => {
 
     const jobData = useJobData(id)
 
-    
     if (!jobData) {
     return <p>Loading job data...</p>;
     }
 
     return (
         <>
-        <h1>This is job: {id}</h1>
+        <h1>{jobData.jobTitle}</h1>
+        <h2>{jobData.companyName}</h2>
+        <h2>Full Job Description:</h2>
         <p>{jobData.jobDescription}</p>
         </>
     )

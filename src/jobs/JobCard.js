@@ -31,6 +31,7 @@ function JobCard({job}){
       }
       return final
     }
+    console.log(job)
 
     return (
       <Link to = {`/jobs/${job.jobId}`} className="job-link">
