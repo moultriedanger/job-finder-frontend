@@ -6,7 +6,7 @@ const CompanyCard = ({company}) =>{
        <Link to={`/companies/${company.companyId}/jobs`} className="company-link">
             <div className="company-card">
                 <h1>{company.companyName}</h1>
-                {/* <p>Company Description: {company.companyDescription}</p> */}
+                {/* <p>Company Description: {company.companyDescription}</p>c */}
                 <p>Location: {company.countryLocated}</p>
                 <button
                     onClick={(e) => {

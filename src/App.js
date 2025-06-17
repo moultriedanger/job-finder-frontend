@@ -26,6 +26,7 @@ function App() {
         <Route path="/companies" element={<Companies />} />
         <Route path="/companies/:id/jobs" element={<Company/>}></Route>
       </Routes>
+
       
       </div>
     </Router>
