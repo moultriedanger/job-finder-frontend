@@ -1,10 +1,8 @@
 import JobCard from "./JobCard"
-import { useEffect, useState } from 'react';
-import useJobData from "./useJobData";
 
-function JobList(){ 
+function JobList({jobs}){ 
  
-    const jobs = useJobData()
+    // const jobs = useJobData()
 
     if (!jobs) {
         return <p>Loading jobs...</p>;
@@ -13,7 +11,7 @@ function JobList(){
     return(
         <div className="job-list-container">
         {
-        jobs.slice(0,5).map((job) => (
+        jobs.map((job) => (
             <JobCard job = {job} key = {job.jobId}/>
         ))
         }

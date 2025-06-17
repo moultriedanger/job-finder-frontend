@@ -222,3 +222,10 @@ a.company-link {
   color: inherit;
   display: block;
 }
+
+
+.page-nav{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

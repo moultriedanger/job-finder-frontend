@@ -1,6 +1,5 @@
 import { useParams} from "react-router-dom"
 import useJobData from "./useJobData"
-import { useEffect } from "react"
 
 const Job = () => {
     const {id} = useParams()
