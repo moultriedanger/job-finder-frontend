@@ -1,6 +1,5 @@
 import { useState, useEffect} from "react";
 
-
 const useJobData = (jobId) => {
 
     const [data, setData] = useState(null);

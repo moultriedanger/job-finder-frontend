@@ -2,6 +2,7 @@ import CompanyList from "./CompanyList";
 import Search from "../Search"
 
 import useCompanyData from "./useCompanyData";
+import PageNav from "../shared/PageNav";
 
 const Companies = () => {
 
@@ -14,7 +15,7 @@ const Companies = () => {
     return (
         <>
             <Search/>
-            <CompanyList companies = {companies}/>
+            <PageNav companies={companies}/>
         </>
       );
 }
