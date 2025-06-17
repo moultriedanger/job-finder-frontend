@@ -1,4 +1,3 @@
-import JobList from "./JobList";
 import Search from "../Search"
 import PageNav from "../shared/PageNav";
 

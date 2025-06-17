@@ -1,8 +1,6 @@
 import JobCard from "./JobCard"
 
 function JobList({jobs}){ 
- 
-    // const jobs = useJobData()
 
     if (!jobs) {
         return <p>Loading jobs...</p>;

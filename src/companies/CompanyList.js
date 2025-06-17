@@ -1,31 +1,7 @@
 import CompanyCard from "./CompanyCard";
 import { useState, useEffect } from 'react';
 
-const CompanyList = () => {
-
-    const url = 'http://localhost:8080/companies';
-
-    const [companies, setCompanies] = useState([])
-
-    const fetchCompanies = async () => {
-
-        try{
-            const response = await fetch(url);
-
-            const data = await response.json()
-            
-            setCompanies(data)
-            return data;
-        }
-        catch (err){
-            console.log(err)
-            console.log("this is basd")
-        }
-    }
-
-    useEffect(() => {
-        fetchCompanies();
-    }, []);
+const CompanyList = ({companies}) => {
 
     return (
 
