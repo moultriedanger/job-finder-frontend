@@ -3,16 +3,12 @@ import { Link } from "react-router-dom";
 
 function JobCard({job}){
 
-    // Destructure for convenience
     const { jobId, jobTitle, companyName, location, maxSalary, postingUrl } = job;
 
-    // Now maxSalary is numeric—treat <1,000 as hourly
     const isHourly = (salary) => salary < 1000;
 
-    // Truncate any decimals and return a string
     const removeDecimal = (salary) => Math.trunc(salary).toString();
 
-    // Format a yearly salary with commas (e.g. 70000 → "70,000")
     const formatYearly = (salary) => Math.trunc(salary).toLocaleString();
     console.log(job)
 
