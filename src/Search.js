@@ -1,56 +1,35 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 function Search({ setResults }) {
-
   const [input, setInput] = useState("");
 
   const fetchData = (value) => {
-    fetch("http://localhost:8080/jobs")
-    .then((response) => response.json())
-    .then((json) => {
-      const results = json.filter((job) => {
-        return (value && job && job.jobTitle && job.jobTitle.toLowerCase().includes(value))
-      })
-      setResults(results);
-    });
-  }
+    fetch(`http://localhost:8080/jobs/search?keyword=${encodeURIComponent(value)}`)
+      .then((r) => r.json())
+      .then((json) => setResults(json))
+      .catch(console.error);
+  };
 
   const handleChange = (value) => {
-    setInput(value)
-    fetchData(value)
-  }
+    setInput(value);
+    fetchData(value);
+  };
 
- 
   return (
     <div className="searchWrapper">
-      <form className="searchContainer">
+      <form 
+        className="searchContainer"
+        onSubmit={(e) => e.preventDefault()}
+      >
         <input 
           type="text" 
-          placeholder="Search..." 
+          placeholder="Search for jobs..." 
           value={input}
           onChange={(e) => handleChange(e.target.value)}
-        />
-
-
-
-        {/* <button type="submit" onClick={async (e)=> { 
-          e.preventDefault(); 
-          const url = "http://localhost:8080/companies/2/jobs"
-          try {
-            const response = await fetch(url);
-            if (!response.ok) {
-              throw new Error(`Response status: ${response.status}`);
-            }
-
-            const json = await response.json();
-            console.log(json);
-          } catch (error) {
-            console.error(error.message);
-          }
-          }}>Search</button> */}
+        />    
       </form>
     </div>
   );
 }
 
-export default Search
+export default Search;

@@ -3,57 +3,44 @@ import { Link } from "react-router-dom";
 
 function JobCard({job}){
 
-    function isHourly(salary){
-      if (salary.length <= 4){
-        return true
-      }
-      return false
-    }
-    function removeDecimal(salary){
-      if (salary.includes('.')){
-        salary = salary.slice(0,salary.length-2)
-        return salary;
-      }
-      return salary
-    }
+    // Destructure for convenience
+    const { jobId, jobTitle, companyName, location, maxSalary, postingUrl } = job;
 
-    function formatYearly(s) {
-      let salary = removeDecimal(s);
-      let final
-      
-      if (salary.length === 5){
-        let index = 2
-        final = salary.slice(0,index) + "," + salary.slice(index)
-      }
-      else{
-        let index = 3
-        final = salary.slice(0,index) + "," + salary.slice(index)
-      }
-      return final
-    }
+    // Now maxSalary is numeric—treat <1,000 as hourly
+    const isHourly = (salary) => salary < 1000;
+
+    // Truncate any decimals and return a string
+    const removeDecimal = (salary) => Math.trunc(salary).toString();
+
+    // Format a yearly salary with commas (e.g. 70000 → "70,000")
+    const formatYearly = (salary) => Math.trunc(salary).toLocaleString();
     console.log(job)
 
     return (
-      <Link to = {`/jobs/${job.jobId}`} className="job-link">
-        <div className="job-card">
-        <h2>{job.jobTitle}</h2>
-        <p>{job.companyName}</p>
-        <p className="location">{job.location}</p>
+    <Link to={`/jobs/${jobId}`} className="job-link">
+      <div className="job-card">
+        <h2>{jobTitle}</h2>
+        <p>{companyName}</p>
+        <p className="location">{location}</p>
         <div>
-          {isHourly(job.maxSalary) ? <p>${removeDecimal(job.maxSalary)} per hour</p> : <p>${formatYearly(job.maxSalary)} per year</p> }
+          {isHourly(maxSalary) ? (
+            <p>${removeDecimal(maxSalary)} per hour</p>
+          ) : (
+            <p>${formatYearly(maxSalary)} per year</p>
+          )}
         </div>
         <button
-              onClick={(e) => {
-                  e.stopPropagation();
-                  window.open(job.postingUrl, '_blank');
-              }}
-          >
-              Apply on LinkedIn
-          </button>
-        </div>
-      </Link>
+          onClick={(e) => {
+            e.stopPropagation();
+            window.open(postingUrl, "_blank");
+          }}
+        >
+          Apply on LinkedIn
+        </button>
+      </div>
+    </Link>
   );
 }
 
-export default JobCard
+export default JobCard;
 

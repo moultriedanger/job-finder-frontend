@@ -16,7 +16,6 @@ const Jobs = () => {
     // Show results if there are any, otherwise show all jobs
     const jobsToDisplay = results.length > 0 ? results : jobs;
 
-
     return (
         <>
             <Search setResults = {setResults}/>
