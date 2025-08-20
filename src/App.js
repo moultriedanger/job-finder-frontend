@@ -9,6 +9,7 @@ import Job from "./jobs/Job";
 import Companies from "./companies/Companies";
 import Company from "./companies/Company"
 import UserLogIn from './signIn/UserLogIn';
+import UserSignUp from './signIn/UserSignUp'
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
         <Route path="/companies" element={<Companies />} />
         <Route path="/companies/:id/jobs" element={<Company/>}></Route>
         <Route path="/signIn" element={<UserLogIn/>}></Route>
+        <Route path="/signUp" element={<UserSignUp/>}></Route>
       </Routes>
       
       </div>

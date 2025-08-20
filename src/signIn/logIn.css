@@ -1,13 +1,9 @@
-.sign-in-page-container{
+.page-container{
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh; 
-    row-gap: 8px;
-
-    /*  */
-
-
+    row-gap: 8px
 }
 
 .sign-in-container{
@@ -21,9 +17,6 @@
     /* Style */
     border: 2px solid black;
     border-radius: 7px;
-
-
-
 }
 
 .sign-in-container h1{
@@ -37,3 +30,12 @@
     gap: 3px;  
     margin:5px;
 }
+
+.dont-have-account-container{
+    display: flex;
+    justify-content: row;
+    margin: 2px;
+}
+
+
+/* Sign Up */

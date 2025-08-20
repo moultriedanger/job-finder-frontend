@@ -11,6 +11,10 @@ const Form = () => {
             <br />
 
             <input type="submit" value="Submit"></input>
+            <div className="dont-have-account-container">
+                <p>Dont have an account?</p>
+                <a href="/signUp">SignUp</a>
+            </div>
         </div>
         
     )
