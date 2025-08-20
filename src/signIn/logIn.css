@@ -1,0 +1,39 @@
+.sign-in-page-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; 
+    row-gap: 8px;
+
+    /*  */
+
+
+}
+
+.sign-in-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: fit-content;   
+    max-width: 100%;     
+    align-items: center;
+
+    /* Style */
+    border: 2px solid black;
+    border-radius: 7px;
+
+
+
+}
+
+.sign-in-container h1{
+    font-size: 20px;
+    margin-bottom: 5px
+}
+
+.form-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 3px;  
+    margin:5px;
+}

@@ -6,7 +6,7 @@ function Nav(){
                 <a href="/">Home</a>
                 <a href="/jobs">Jobs</a> 
                 <a href="/companies">Companies</a>
-                <a href="/">Sign in</a>
+                <a href="/logIn">Sign in</a>
             </div>
         </nav>
     )

@@ -8,6 +8,7 @@ import Jobs from "./jobs/Jobs";
 import Job from "./jobs/Job";
 import Companies from "./companies/Companies";
 import Company from "./companies/Company"
+import UserLogIn from './signIn/UserLogIn';
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
         <Route path="/jobs/:id" element={<Job />} />
         <Route path="/companies" element={<Companies />} />
         <Route path="/companies/:id/jobs" element={<Company/>}></Route>
+        <Route path="/signIn" element={<UserLogIn/>}></Route>
       </Routes>
       
       </div>
