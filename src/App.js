@@ -10,6 +10,7 @@ import Companies from "./companies/Companies";
 import Company from "./companies/Company"
 import UserLogIn from './signIn/UserLogIn';
 import UserSignUp from './signIn/UserSignUp'
+import UserProfile from './profile/UserProfile';
 
 
 function App() {
@@ -27,6 +28,8 @@ function App() {
         <Route path="/companies/:id/jobs" element={<Company/>}></Route>
         <Route path="/signIn" element={<UserLogIn/>}></Route>
         <Route path="/signUp" element={<UserSignUp/>}></Route>
+
+        <Route path="/myProfile" element={<UserProfile/>}></Route>
       </Routes>
       
       </div>
